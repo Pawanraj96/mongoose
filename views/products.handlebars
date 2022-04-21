@@ -1,0 +1,26 @@
+<table class="table table-striped mt-2" >
+  <h1 align="center">Gadgets</h1>
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Sl.No</th>
+      <th scope="col">Product</th>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each products}}
+    <tr>
+      <th scope="row">{{_id}}</th>
+      <td>{{pName}}</td>
+      <td>{{pDesc}}</td>
+      <td>{{pPrice}}</td>
+      <td><form action="/products/edit-product/{{_id}}" method="GET"><button class="btn btn-primary" type="submit">Edit</button></form></td>
+      <td><form action="/products/delete-product/{{_id}}" method="GET"><button class="btn btn-danger" type="submit">Delete</button></form></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+

@@ -1,0 +1,17 @@
+<form class="container col-4 md-4" action="/products/edit-product/{{selectedProduct._id}}" method="POST">
+    <h1 align="center">Edit Gadgets</h1>
+    
+    <div class="form-group">
+        <label for="pName">Product</label>
+        <input type="text" class="form-control" name='pName' id="pName" value="{{selectedProduct.pName}}" placeholder="Product Name">
+    </div>
+    <div class="form-group">
+        <label for="pDesc">Description</label>
+        <input type="text" class="form-control" name='pDesc' id="pDesc" value="{{selectedProduct.pDesc}}" placeholder=" ProductDescription">
+    </div>
+    <div class="form-group">
+        <label for="pPrice">Price</label>
+        <input type="number" class="form-control" name='pPrice' id="pPrice" value="{{selectedProduct.pPrice}}" placeholder=" Product Price">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
